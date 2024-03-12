@@ -1,36 +1,49 @@
 ### ToDo
 
- - [ ] Console
-   - [ ] Logging
-   - [ ] View & hide warns, errors, logs
+ - [ ] Add husky and cz
+ - [ ] Prepare for export and upload
+
+ - [x] Console
+   - [x] Logging
+   - [x] View & hide warns, errors, logs
    - [ ] Export logs
+   - [ ] Style
  - [ ] Code editor
    - [ ] Syntax highlight
    - [ ] Global vars
    - [ ] Error highlight
+   - [ ] Style
  - [ ] File browser
    - [ ] List view
    - [ ] Grid view
+   - [ ] Style
  - [ ] Anim generator
    - [ ] Keyframes
    - [ ] Interpolation 
+   - [ ] Style
  - [ ] Image import
    - [ ] Image data and props 
+   - [ ] Style
  - [ ] Game editor
    - [ ] Tile view
    - [ ] GameObject placement 
+   - [ ] Style
  - [ ] Prefabs
  - [ ] Game inspector
    - [ ] Global scripts
    - [ ] Tiles list (?)
+   - [ ] Style
  - [ ] Tile inspector
    - [ ] GameObjects list 
+   - [ ] Style
  - [ ] GameObject inspector
    - [ ] Script bind
    - [ ] Background
    - [ ] Name
    - [ ] Tags
+   - [ ] Style
  - [ ] CodeBlock inspector
    - [ ] Name (?)
    - [ ] Called function
    - [ ] Background 
+   - [ ] Style
