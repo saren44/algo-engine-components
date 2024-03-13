@@ -3,7 +3,7 @@
  - [ ] Add husky and cz
  - [ ] Prepare for export and upload
 
- - [x] Console
+ - [ ] Console
    - [x] Logging
    - [x] View & hide warns, errors, logs
    - [ ] Export logs
@@ -22,6 +22,7 @@
    - [ ] Interpolation 
    - [ ] Style
  - [ ] Image import
+   - [x] Base structure 
    - [ ] Image data and props 
    - [ ] Tilemap (multiple)
    - [ ] Style
