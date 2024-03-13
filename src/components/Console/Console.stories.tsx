@@ -3,6 +3,7 @@ import { MockComponent } from '../MockComponent/MockComponent';
 import { StoryWrapper } from '../StoryWrapper/StoryWrapper';
 import { ConsoleComponent } from './Console';
 import { ConsoleData, LogType } from './types';
+import { wrapComponent } from '../../utils/WrapComponent';
 
 const getRandomLogType = () => {
   const randomizer = Math.random();
@@ -59,11 +60,18 @@ type Story = StoryObj<typeof MockComponent>;
 export const Default: Story = {
   decorators: [
     (Story) => (
-      <StoryWrapper>
-        <Story />
-      </StoryWrapper>
-    )
-  ],
+      wrapComponent(Story)
+    )],
+  args: {
+    
+  }
+};
+
+export const Wide: Story = {
+  decorators: [
+    (Story) => (
+      wrapComponent(Story, 700, 200)
+    )],
   args: {
     
   }

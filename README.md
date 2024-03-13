@@ -23,6 +23,7 @@
    - [ ] Style
  - [ ] Image import
    - [ ] Image data and props 
+   - [ ] Tilemap (multiple)
    - [ ] Style
  - [ ] Game editor
    - [ ] Tile view
