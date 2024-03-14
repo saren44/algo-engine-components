@@ -1,11 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ImageImporter } from './ImageImporter';
+import { FileTree } from './FileTree';
 import { wrapComponent } from '../../utils/WrapComponent';
 import { fn } from '@storybook/test';
+import { mockData } from './types';
 
 const meta = {
-  title: 'Components/Image importer',
-  component: ImageImporter,
+  title: 'Components/File tree',
+  component: FileTree,
   parameters: {
     layout: 'centered',
   },
@@ -13,50 +14,50 @@ const meta = {
   argTypes: {
   },
   args: {  
-		importCallback: fn(),
+		files: mockData
   },
   
-} satisfies Meta<typeof ImageImporter>;
+} satisfies Meta<typeof FileTree>;
 
 export default meta;
-type Story = StoryObj<typeof ImageImporter>;
+type Story = StoryObj<typeof FileTree>;
 
-export const Default: Story = {
-  decorators: [
-    (Story) => (
-      wrapComponent(Story, 300, 200)
-    )],
-  args: {
-    
-  }
-};
-
-export const Taller: Story = {
+export const DefaultList: Story = {
   decorators: [
     (Story) => (
       wrapComponent(Story, 300, 400)
     )],
   args: {
-    
+		displayType: 'list'
   }
 };
 
-export const ThinDefault: Story = {
+export const DefaultGrid: Story = {
+  decorators: [
+    (Story) => (
+      wrapComponent(Story, 300, 400)
+    )],
+  args: {
+    displayType: 'grid'
+  }
+};
+
+export const ThinnerList: Story = {
   decorators: [
     (Story) => (
       wrapComponent(Story, 150, 200)
     )],
   args: {
-    
+    displayType: 'list'
   }
 };
 
-export const ThinTall: Story = {
+export const ThinnerGrid: Story = {
   decorators: [
     (Story) => (
-      wrapComponent(Story, 150, 400)
+      wrapComponent(Story, 150, 200)
     )],
   args: {
-    
+    displayType: 'grid'
   }
 };

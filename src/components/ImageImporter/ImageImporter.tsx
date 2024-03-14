@@ -6,7 +6,7 @@ import { useCallback, useState, useRef } from "react";
 
 
 export const ImageImporter = ({
-	onImageExport
+	importCallback
 }:IImageImporterProps) => {
   
   const onDrop = useCallback((acceptedFiles: any) => {
@@ -56,8 +56,13 @@ export const ImageImporter = ({
 				for (let j = 0; j < sliceColumns; j += 1) {
 					targetCtx?.drawImage(src, j * resultWidth, i * resultHeight, resultWidth, resultHeight, 0, 0, resultWidth, resultHeight);
 					debugOpenImageInNewTab(target.toDataURL());
+
+					targetCtx?.clearRect(0, 0, target.width, target.height);
 				}
 			}
+
+			// todo Add actual image handling
+			importCallback();
 			
 		}
 
@@ -79,8 +84,9 @@ export const ImageImporter = ({
   const {getRootProps, getInputProps} = useDropzone({onDrop})
 
 	const onImport = () => {
-		 if (imgUrl !== null)  {
+		 if (imgUrl !== '')  {
 				sliceImage();
+				console.log(imgUrl)
 
 		}
 		else {

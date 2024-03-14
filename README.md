@@ -26,6 +26,8 @@
    - [ ] Image data and props 
    - [x] Tilemap (multiple)
    - [ ] Style
+	 - [ ] Image preview
+	 - [ ] Advanced settings (?)
  - [ ] Game editor
    - [ ] Tile view
    - [ ] GameObject placement 
