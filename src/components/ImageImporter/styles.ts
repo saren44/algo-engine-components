@@ -24,15 +24,15 @@ export const StyledImageImporter = styled.div`
 
   .dropZone {
     width: 30%;
-    height: 50%;
+    height: 90%;
     border: 2px solid blue;
-    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+		background-color:lightgray;
 
     @container ${columnCondition} {
-      width: 60%;
+      width: 90%;
       height: 40%;
     }
   }
@@ -41,9 +41,11 @@ export const StyledImageImporter = styled.div`
     height: 90%;
     width: 50%;
     border: 1px solid black;
+		display: flex;
+		flex-direction: column;
 
     @container ${columnCondition} {
-      350px: 60%;
+      width: 90%;
       height: 40%;
     }
   }

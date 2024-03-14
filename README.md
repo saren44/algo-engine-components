@@ -24,7 +24,7 @@
  - [ ] Image import
    - [x] Base structure 
    - [ ] Image data and props 
-   - [ ] Tilemap (multiple)
+   - [x] Tilemap (multiple)
    - [ ] Style
  - [ ] Game editor
    - [ ] Tile view

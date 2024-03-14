@@ -1,7 +1,7 @@
 
 
 export interface IImageImporterProps {
-
+	onImageExport: () => void;
 }
 
 export interface IStyledImageImporterprops {
