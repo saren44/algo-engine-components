@@ -20,15 +20,28 @@ const getRandomLogType = () => {
   return lt;
 }
 
+const getRandomLogLength = () => {
+	const randomizer = Math.random();
+	let message: string;
+	if (randomizer < 0.6) {
+		message = "short line";
+	}
+	else {
+		message = "a long line without any meaning whatsoever, except for checking multiline logs."
+	}
+	return message;
+}
+
 const generateMockData = (items: number = 20) => {
   let res:ConsoleData[] = []
 
   const now = new Date();
   for (let i = 0; i < items; i += 1) {
     const logType = getRandomLogType();
+		const logMessage = getRandomLogLength();
     res.push({
       timestamp: now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0'),
-      text: `${logType} short line!`,
+      text: `${logType}: ${logMessage}`,
       logType
     })
   }

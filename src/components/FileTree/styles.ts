@@ -9,6 +9,7 @@ export const StyledFileTree = styled.div`
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	user-select: none;
 	
 	.filesContainer {
 		width: 100%;

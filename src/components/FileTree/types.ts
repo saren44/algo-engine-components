@@ -2,7 +2,8 @@
 
 export interface IFileTreeProps {
 	files: IFile;
-	displayType: 'list' | 'grid'
+	displayType: 'list' | 'grid';
+	onFileSelection: (file: IFile) => void;
 }
 
 

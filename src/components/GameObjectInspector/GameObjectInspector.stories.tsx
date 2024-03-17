@@ -1,64 +1,67 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { FileTree } from './FileTree';
+import { GameObjectInspector } from './GameObjectInspector';
 import { wrapComponent } from '../../utils/WrapComponent';
 import { fn } from '@storybook/test';
-import { mockData } from './types';
 
 const meta = {
-  title: 'Components/File tree',
-  component: FileTree,
+  title: 'Components/Game Object Inspector',
+  component: GameObjectInspector,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {
+		name: { control: { type: 'text' }}
   },
   args: {  
-		files: mockData,
-		onFileSelection: fn()
+		name: 'debug component',
+		pos: { x: 10, y: 5},
+		onBackgroundAssetSelect: fn()
   },
   
-} satisfies Meta<typeof FileTree>;
+} satisfies Meta<typeof GameObjectInspector>;
 
 export default meta;
-type Story = StoryObj<typeof FileTree>;
+type Story = StoryObj<typeof GameObjectInspector>;
 
-export const DefaultList: Story = {
+export const Default: Story = {
+  decorators: [
+    (Story) => (
+      wrapComponent(Story, 300, 200)
+    )],
+  args: {
+    
+  }
+};
+
+export const Taller: Story = {
   decorators: [
     (Story) => (
       wrapComponent(Story, 300, 400)
     )],
   args: {
-		displayType: 'list'
+    
   }
 };
 
-export const DefaultGrid: Story = {
-  decorators: [
-    (Story) => (
-      wrapComponent(Story, 300, 400)
-    )],
-  args: {
-    displayType: 'grid'
-  }
-};
-
-export const ThinnerList: Story = {
+export const ThinDefault: Story = {
   decorators: [
     (Story) => (
       wrapComponent(Story, 150, 200)
     )],
   args: {
-    displayType: 'list'
+    
   }
 };
 
-export const ThinnerGrid: Story = {
+export const ThinTall: Story = {
   decorators: [
     (Story) => (
-      wrapComponent(Story, 150, 200)
+      wrapComponent(Story, 150, 400)
     )],
   args: {
-    displayType: 'grid'
+    
   }
 };
+
+

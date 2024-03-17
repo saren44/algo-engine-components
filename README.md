@@ -16,7 +16,12 @@
  - [ ] File browser
    - [x] List view
    - [x] Grid view
+	 - [ ] Rework to use premade Component
    - [ ] Style
+ - [ ] Asset selection modal
+	- [ ] Modal view
+	- [ ] on asset selection fn
+	- [ ] styles
  - [ ] Anim generator
    - [ ] Keyframes
    - [ ] Interpolation 
