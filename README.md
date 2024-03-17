@@ -14,8 +14,8 @@
    - [ ] Error highlight
    - [ ] Style
  - [ ] File browser
-   - [ ] List view
-   - [ ] Grid view
+   - [x] List view
+   - [x] Grid view
    - [ ] Style
  - [ ] Anim generator
    - [ ] Keyframes
