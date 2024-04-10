@@ -2,8 +2,7 @@
 
 export interface IFileTreeProps {
 	files: IFile;
-	displayType: 'list' | 'grid';
-	onFileSelection: (file: IFile) => void;
+	onFileSelection: (fileName: string) => void;
 }
 
 
@@ -14,36 +13,36 @@ export interface IFileIconProps {
 
 
 export const mockData : IFile = {
-	fileName: 'root',
-	content: [
+	name: 'root',
+	children: [
 		{
-			fileName: 'scripts',
-			content: [
+			name: 'scripts',
+			children: [
 				{
-						fileName: 'gameManager.alsc',
+						name: 'gameManager.alsc',
 						content: 'sample content'
 				},
 				{
-					fileName: 'player.alsc',
+					name: 'player.alsc',
 					content: 'player sample content'
 				},
 			]
 		},
 		{
-			fileName: 'assets',
-			content: [
+			name: 'assets',
+			children: [
 				{
-						fileName: 'player.png',
+						name: 'player.png',
 						content: './path/to/playerimg'
 				},
 				{
-					fileName: 'ground.png',
+					name: 'ground.png',
 					content: './path/to/groundimg'
 				},
 			]
 		},
 		{
-			fileName: 'README.md',
+			name: 'README.md',
 			content: 'hello world'
 		}
 	]
@@ -51,6 +50,7 @@ export const mockData : IFile = {
 
 
 export interface IFile {
-	fileName: string;
-	content: string | Array<IFile>;
+	name: string;
+	children?: Array<IFile>;
+	content?: string;
 }

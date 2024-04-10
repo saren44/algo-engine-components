@@ -17,6 +17,7 @@ export const StyledImageImporter = styled.div`
   justify-content: space-evenly;
   align-items: center;
   container-type: size;
+	font-family: monospace;
 
   @container ${columnCondition} {
     flex-direction: column;
@@ -49,5 +50,17 @@ export const StyledImageImporter = styled.div`
       height: 40%;
     }
   }
+
+	input {
+		font-family: monospace;
+	}
+
+	select {
+		font-family: monospace;
+	}
+
+	button {
+		font-family: monospace;
+	}
 `
 

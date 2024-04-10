@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const StyledGameObjectInspector = styled.div`
+export const StyledTileInspector = styled.div`
 	width: 100%;
 	height: 100%;
 	overflow-y: auto;
@@ -20,23 +20,19 @@ export const StyledGameObjectInspector = styled.div`
 		margin-top: 10px;
 
 	}
-
-	.dataContainer {
+	.listItem {
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
+		border: 1px solid black;
 		align-items: center;
-	}
-
-	.textContainer {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		justify-content: space-between;
+		width: 80%;
+		cursor: pointer;
 	}
 
 	.backgroundIcon {
-		width: 100px;
-		height: 100px;
+		width: 20px;
+		height: 20px;
 		background-color: lightgreen;
 		cursor: pointer;
 	}

@@ -1,29 +1,32 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { GameObjectInspector } from './GameObjectInspector';
 import { wrapComponent } from '../../utils/WrapComponent';
 import { fn } from '@storybook/test';
+import { TileInspector } from './TileInspector';
+import { IGameObject } from './types';
+
+const mockComponents: Array<IGameObject> = [
+	{name: 'player', background: {name: 'mockBg1', content: ''}},
+	{name: 'coin', background: {name: 'mockBg2', content: ''}},
+	{name: 'background', background: {name: 'mockBg3', content: ''}},
+]
 
 const meta = {
-  title: 'Components/Game Object Inspector',
-  component: GameObjectInspector,
+  title: 'Components/Tile Inspector',
+  component: TileInspector,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {
-		name: { control: { type: 'text' }}
-  },
   args: {  
-		name: 'debug component',
 		pos: { x: 10, y: 5},
-		onBackgroundAssetSelect: fn(),
-		onScriptAssetSelect: fn()
+		onGameObjectClick: fn(),
+		objects: mockComponents
   },
   
-} satisfies Meta<typeof GameObjectInspector>;
+} satisfies Meta<typeof TileInspector>;
 
 export default meta;
-type Story = StoryObj<typeof GameObjectInspector>;
+type Story = StoryObj<typeof TileInspector>;
 
 export const Default: Story = {
   decorators: [

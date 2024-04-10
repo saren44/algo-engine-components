@@ -15,22 +15,26 @@ export const GameObjectInspector = ({
 	const handleClickBackgroundAsset = () => {
 		//emulate asset select modal for now
 		console.log('changing background')
-		onBackgroundAssetSelect({fileName: 'debug.jpg', content: 'debugContent'})
+		onBackgroundAssetSelect({name: 'debug.jpg', content: 'debugContent'})
 	}
 
 	const handleClickScriptAsset = () => {
 		//emulate asset select modal for now
 		console.log('changing script')
-		onBackgroundAssetSelect({fileName: 'debug.alsc', content: 'debugContentScript'})
+		onScriptAssetSelect({name: 'debug.alsc', content: 'debugContentScript'})
 	}
 
 	return(
 	<StyledGameObjectInspector>
 		<div className="contentContainer">
-			<p> {name} </p>
-			<p> {`pos: x: ${pos.x}, y: ${pos.y}`} </p>
-			<p onClick={handleClickScriptAsset}> {`script: ${script ? script.fileName : 'click to select'}`} </p>
-			<div className="backgroundIcon" onClick={handleClickBackgroundAsset} />
+			<div className="dataContainer">
+				<div className="backgroundIcon" onClick={handleClickBackgroundAsset} />
+				<div className="textContainer">
+					<span> {name} </span>
+					<span> {`pos: x: ${pos.x}, y: ${pos.y}`} </span>
+					<span onClick={handleClickScriptAsset} style={{ cursor: 'pointer'}}> {`script: ${script ? script.name : 'click to select'}`} </span>
+				</div>
+			</div>
 		</div>
 
 	</StyledGameObjectInspector>

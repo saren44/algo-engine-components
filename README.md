@@ -13,7 +13,7 @@
    - [ ] Global vars
    - [ ] Error highlight
    - [ ] Style
- - [ ] File browser
+ - [x] File browser
    - [x] List view
    - [x] Grid view
 	 - [ ] Rework to use premade Component
@@ -42,13 +42,13 @@
    - [ ] Global scripts
    - [ ] Tiles list (?)
    - [ ] Style
- - [ ] Tile inspector
-   - [ ] GameObjects list 
+ - [x] Tile inspector
+   - [x] GameObjects list 
    - [ ] Style
- - [ ] GameObject inspector
-   - [ ] Script bind
-   - [ ] Background
-   - [ ] Name
+ - [x] GameObject inspector
+   - [x] Script bind
+   - [x] Background
+   - [x] Name
    - [ ] Tags
    - [ ] Style
  - [ ] CodeBlock inspector
