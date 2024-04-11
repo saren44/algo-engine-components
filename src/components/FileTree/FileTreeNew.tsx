@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import TreeView, { flattenTree } from "react-accessible-treeview";
 import "./styles.css";
 import { IFileTreeProps, mockData } from "./types";
+import { StyledFileTree } from "./styles";
 
 const folder = {
   name: "",
@@ -32,7 +33,7 @@ const folder = {
   ],
 };
 
-
+let x;
 export const FileTreeView = ({
 	onFileSelection,
 	files,
@@ -44,7 +45,7 @@ export const FileTreeView = ({
 	}, [files])
 
   return (
-    <div>
+    <StyledFileTree>
       <div className="directory">
         <TreeView
           data={data}
@@ -58,11 +59,8 @@ export const FileTreeView = ({
             level,
           }) => (
 						<div {...getNodeProps()} style={{ paddingLeft: 20 * (level - 1) }}>
-              {isBranch ? (
+              {isBranch && (
                 	<span> dir </span>
-
-              ) : (
-                	<span> fil </span>
 
               )}
 							{element.name}
@@ -70,7 +68,7 @@ export const FileTreeView = ({
 						)}
         />
       </div>
-    </div>
+    </StyledFileTree>
   );
 }
 

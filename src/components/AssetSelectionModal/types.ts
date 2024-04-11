@@ -1,10 +1,7 @@
-export interface IFile {
-	fileName: string;
-	content: string | Array<IFile>;
-}
+import { IFile } from "../FileTree/types";
 
 
 export interface IAssetSelectionModalProps {
 	files: IFile;
-	onFileSelection: (file: IFile) => void;
+	onConfirmation: (fileName: string) => void;
 }

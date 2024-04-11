@@ -5,6 +5,7 @@ export const StyledFileTree = styled.div`
 	width: 100%;
 	height: 100%;
 	overflow-y: auto;
+	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -18,7 +19,7 @@ export const StyledFileTree = styled.div`
 		align-items: center;
 		flex-wrap: wrap;
 		margin-top: 10px;
-
+		max-height: 100%;
 	}
 
 	.gridIcon {

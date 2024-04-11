@@ -18,9 +18,9 @@
    - [x] Grid view
 	 - [ ] Rework to use premade Component
    - [ ] Style
- - [ ] Asset selection modal
-	- [ ] Modal view
-	- [ ] on asset selection fn
+ - [x] Asset selection modal
+	- [x] Modal view
+	- [x] on asset selection fn
 	- [ ] styles
  - [ ] Anim generator
    - [ ] Keyframes

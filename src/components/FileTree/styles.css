@@ -6,6 +6,8 @@
   user-select: none;
   padding: 20px;
   border-radius: 0.4em;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 .directory .tree,

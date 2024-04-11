@@ -26,6 +26,35 @@ export const mockData : IFile = {
 					name: 'player.alsc',
 					content: 'player sample content'
 				},
+				{
+					name: 'otherScripts',
+					children: [
+						{
+								name: 'asd.alsc',
+								content: 'asd content'
+						},
+						{
+							name: 'def.alsc',
+							content: 'def content'
+						},
+						{
+							name: 'asd.alsc',
+							content: 'asd content'
+						},
+						{
+							name: 'xyz.alsc',
+							content: 'xyz content'
+						},
+						{
+							name: 'qwe.alsc',
+							content: 'qwe content'
+						},
+						{
+							name: 'rty.alsc',
+							content: 'rty content'
+						},
+					]
+				}
 			]
 		},
 		{
